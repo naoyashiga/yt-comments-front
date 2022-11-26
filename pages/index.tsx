@@ -1,11 +1,14 @@
+import { Nav } from "components/layouts/Nav/Nav";
 
 export default function Home() {
   return (
-    <div className='bg-teal-50 pt-5'>
-      <h1 className='text-3xl font-bold underline'>
-        Hello world!
-      </h1>
+    <div className="pt-5">
+      <Nav></Nav>
 
+      <h1 className="text-3xl font-semibold underline">Hello world!aahoge</h1>
+      <button className="bg-sky-700 px-4 py-2 text-white hover:bg-sky-100 hover:bg-sky-800 sm:px-8 sm:py-3">
+        sample button
+      </button>
     </div>
-  )
+  );
 }
