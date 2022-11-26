@@ -17,8 +17,8 @@ export default function Home() {
               src="https://yt3.ggpht.com/ytc/AMLnZu_zf38Z8G8MnIkCirME-OWV-dJj6IlCaEa12AgDPg=s88-c-k-c0x00ffffff-no-rj"
               alt="ステハゲチャンネル二代目 SUTEHAGEch 2nd"
             />
-            <div className="rounded-lg bg-white px-8 pt-32 pb-10 text-gray-400 shadow-lg">
-              <h3 className="font-title mb-3 text-xl text-gray-800">
+            <div className="rounded-lg bg-white px-8 pt-32 pb-10 text-gray-400 shadow-lg  dark:bg-gray-800">
+              <h3 className="font-title mb-3 text-xl text-gray-800 dark:text-white">
                 ステハゲチャンネル二代目 SUTEHAGEch 2nd
               </h3>
               <p className="font-body">YouTuber</p>
@@ -33,7 +33,7 @@ export default function Home() {
                 className="font-body text-blue-500 hover:text-gray-800"
                 href="https://www.youtube.com/@sutehagech2nd489"
               >
-                Jacky@poute.com
+                YouTubeチャンネルページ
               </Link>
             </div>
           </div>
