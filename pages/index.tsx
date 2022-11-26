@@ -3,6 +3,7 @@ import { Table } from "components/elements/Table/Table";
 import { Footer } from "components/layouts/Footer/Footer";
 import { Nav } from "components/layouts/Nav/Nav";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -12,10 +13,12 @@ export default function Home() {
       <div className="container mx-auto flex w-full flex-col items-center justify-center">
         <div className="gap-8 md:flex">
           <div className="mb-8 text-center md:mb-0">
-            <img
+            <Image
               className="mx-auto -mb-24 h-48 w-48 rounded-full"
               src="https://yt3.ggpht.com/ytc/AMLnZu_zf38Z8G8MnIkCirME-OWV-dJj6IlCaEa12AgDPg=s88-c-k-c0x00ffffff-no-rj"
               alt="ステハゲチャンネル二代目 SUTEHAGEch 2nd"
+              width={192}
+              height={192}
             />
             <div className="rounded-lg bg-white px-8 pt-32 pb-10 text-gray-400 shadow-lg  dark:bg-gray-800">
               <h3 className="font-title mb-3 text-xl text-gray-800 dark:text-white">
