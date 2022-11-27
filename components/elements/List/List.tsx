@@ -2,18 +2,30 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const List = () => {
+  const items = [...Array(5)].map((v, index) => {
+    return {
+      rank: index + 1,
+      name: `fake name:${index}`,
+      imageSrc:
+        "https://yt3.ggpht.com/ytc/AMLnZu96se9JtDlaK8AZSABvOuuNvmUhvlj-nlQHLYs4Xdq_0A=s88-c-k-c0x00ffffff-no-rj",
+      commentCount: 1000 - index * 100,
+    };
+  });
   return (
     <div className="container mx-auto flex w-full flex-col items-center justify-center">
       <ul className="flex flex-col">
-        {[...Array(5)].map((v, index) => {
+        {items.map((item, index) => {
           return (
             <li key={index} className="mb-2 flex flex-row border-gray-400">
               <div className="flex flex-1 cursor-pointer select-none items-center rounded-md border bg-white p-4 shadow dark:bg-gray-800">
+                <div className="mr-4 text-xs text-gray-600 dark:text-gray-200">
+                  {item.rank}位
+                </div>
                 <div className="mr-4 flex h-10 w-10 flex-col items-center justify-center">
                   <Link href="#" className="relative block">
                     <Image
                       alt="profil"
-                      src="https://yt3.ggpht.com/ytc/AMLnZu96se9JtDlaK8AZSABvOuuNvmUhvlj-nlQHLYs4Xdq_0A=s88-c-k-c0x00ffffff-no-rj"
+                      src={item.imageSrc}
                       className="mx-auto h-10 w-10 rounded-full object-cover "
                       width={40}
                       height={40}
@@ -21,13 +33,10 @@ export const List = () => {
                   </Link>
                 </div>
                 <div className="flex-1 pl-1 md:mr-16">
-                  <div className="font-medium dark:text-white">Jean Marc</div>
+                  <div className="font-medium dark:text-white">{item.name}</div>
                   <div className="text-sm text-gray-600 dark:text-gray-200">
-                    Developer
+                    コメント回数:{item.commentCount}回
                   </div>
-                </div>
-                <div className="text-xs text-gray-600 dark:text-gray-200">
-                  6:00 AM
                 </div>
                 {/* <button className="flex w-24 justify-end text-right">
                   <svg

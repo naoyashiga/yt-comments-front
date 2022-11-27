@@ -42,8 +42,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto flex w-full flex-col items-center justify-center">
-        <h1 className="text-3xl">視聴者コメント回数ランキング</h1>
+      <div className="container mx-auto mb-12 flex w-full flex-col items-center justify-center">
+        <h1 className="my-12 text-3xl text-gray-800 dark:text-white">
+          視聴者コメント回数ランキング
+        </h1>
 
         <List></List>
       </div>
